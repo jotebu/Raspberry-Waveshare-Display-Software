@@ -1,0 +1,19 @@
+{
+  "host_label": "MediaMTX",
+  "refresh_seconds": 5,
+  "show_cpu_ram": true,
+  "services": [
+    "container:mediamtx|MediaMTX",
+    "container:mjpeg-gateway|MJPEG-Gateway"
+  ],
+  "display": {
+    "spi_bus": 0,
+    "spi_device": 0,
+    "spi_hz": 40000000,
+    "dc_gpio": 25,
+    "reset_gpio": 27,
+    "backlight_gpio": 18,
+    "rotation": 90,
+    "brightness": 0.8
+  }
+}

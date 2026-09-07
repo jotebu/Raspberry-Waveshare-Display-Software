@@ -1,0 +1,15 @@
+[Unit]
+Description=Raspberry Pi LCD Statusanzeige
+After=network.target pihole-FTL.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/pi-status-display
+Environment=PYTHONPATH=/opt/pi-status-display/src
+ExecStart=/opt/pi-status-display/.venv/bin/pi-status-display --config /opt/pi-status-display/config/pihole.json --log-level INFO
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pi-status-display"
+version = "1.0.0"
+description = "Compact Raspberry Pi status display for the Waveshare 1.9inch ST7789V2 LCD"
+requires-python = ">=3.9"
+dependencies = ["Pillow>=9.0", "spidev>=3.5", "gpiozero>=1.6"]
+
+[project.scripts]
+pi-status-display = "pi_status_display.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
